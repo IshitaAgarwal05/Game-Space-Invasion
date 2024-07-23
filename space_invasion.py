@@ -18,12 +18,12 @@ RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 
 #Setup game sounds
-pygame.mixer.music.load("small python projects/Games/space_invasion/background_music.mp3")
-bullet_sound = pygame.mixer.Sound("small python projects/Games/space_invasion/bullet_shot.wav")
-game_over_sound = pygame.mixer.Sound("small python projects/Games/space_invasion/game_over.wav")
+pygame.mixer.music.load("Game-Space-Invasion/background_music.mp3")
+bullet_sound = pygame.mixer.Sound("Game-Space-Invasion/bullet_shot.wav")
+game_over_sound = pygame.mixer.Sound("Game-Space-Invasion/game_over.wav")
 
 # Spaceship
-player_img = pygame.image.load("small python projects/Games/space_invasion/player.png")
+player_img = pygame.image.load("Game-Space-Invasion/player.png")
 player_img = pygame.transform.scale(player_img, (116, 92.33))
 player_rect = player_img.get_rect()
 player_rect.centerx = WIDTH // 2
@@ -33,14 +33,14 @@ player_energy = 100
 player_lives = 3
 
 # Bullet 
-bullet_img = pygame.image.load("small python projects/Games/space_invasion/bullet.png")
+bullet_img = pygame.image.load("Game-Space-Invasion/bullet.png")
 bullet_img = pygame.transform.scale(bullet_img, (90, 91.5))
 bullet_rect = bullet_img.get_rect()
 bullet_speed = 10
 bullet_state = "ready"  # "ready" means the bullet is ready to fire, "fire" means it's currently moving
 
 # Alien
-alien_img = pygame.image.load("small python projects/Games/space_invasion/alien"+str(random.randint(1,6))+".png")
+alien_img = pygame.image.load("Game-Space-Invasion/alien"+str(random.randint(1,6))+".png")
 alien_img = pygame.transform.scale(alien_img, (150, 150))
 alien_rect = alien_img.get_rect()
 alien_rect.x = random.randint(50, WIDTH-50)
@@ -49,7 +49,7 @@ alien_speed = 2
 alien_energy = 100  # Initialize alien_energy
 
 # Alien bullets
-alien_bullet_img = pygame.image.load("small python projects/Games/space_invasion/alien_bullet.png")
+alien_bullet_img = pygame.image.load("Game-Space-Invasion/alien_bullet.png")
 alien_bullet_img = pygame.transform.scale(alien_bullet_img, (96, 54))
 alien_bullet_rect = alien_bullet_img.get_rect()
 alien_bullet_speed = 5
