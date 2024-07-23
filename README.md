@@ -1,9 +1,9 @@
 # Game-Space-Invasion
 2 simple Space Invasion Games in python language.
 
-**space_invasion.py** < br />
+**space_invasion.py** < br / >
 Contains a single alien spaceship attacking on your spaceship, with particular energy levels assigned to both, whichever reaches the 0% energy level first loses. The aim is to target the opponent and shoot the bullets, while protecting self.
-< br /> < br />
+< br / >
 
 **space_invasion2.py** < br />
 Contains a number of alien spaceships in a grid, which shoot randomly targeting the player. The player needs to target and shoot them one by one, to destroy them. As soon as all the alien spaceships are destroyed, the player wins, but if the player is hit even a single time by the opponent's bullet, he/she loses immediately.
