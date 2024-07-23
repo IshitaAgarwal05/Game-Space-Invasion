@@ -22,16 +22,16 @@ font30 = pygame.font.SysFont('Constantia', 30)
 font40 = pygame.font.SysFont('Constantia', 40)
 
 #Load sounds and music
-explosion_fx = pygame.mixer.Sound("small python projects/Games/space_invasion/bullet_shot.wav")
+explosion_fx = pygame.mixer.Sound("Game-Space-Invasion/bullet_shot.wav")
 explosion_fx.set_volume(0.5)
 
-explosion2_fx = pygame.mixer.Sound("small python projects/Games/space_invasion/bullet_shot.wav")
+explosion2_fx = pygame.mixer.Sound("Game-Space-Invasion/bullet_shot.wav")
 explosion2_fx.set_volume(0.25)
 
-game_over_sound = pygame.mixer.Sound("small python projects/Games/space_invasion/game_over.wav")
+game_over_sound = pygame.mixer.Sound("Game-Space-Invasion/game_over.wav")
 game_over_sound.set_volume(0.4)
 
-pygame.mixer.music.load("small python projects/Games/space_invasion/background_music.mp3")
+pygame.mixer.music.load("Game-Space-Invasion/background_music.mp3")
 
 #screen game variables 
 rows = 5
@@ -49,7 +49,7 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
 #load image 
-bg = pygame.image.load("small python projects/Games/space_invasion/bg_game.png")
+bg = pygame.image.load("Game-Space-Invasion/bg_game.png")
 bg = pygame.transform.scale(bg, (800, 600))
 
 def draw_bg():
@@ -63,7 +63,7 @@ def draw_text(text, font, text_col, x, y):
 class Spaceship(pygame.sprite.Sprite):
     def __init__(self, x, y, health):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("small python projects/Games/space_invasion/player.png")
+        self.image = pygame.image.load("Game-Space-Invasion/player.png")
         self.image = pygame.transform.scale(self.image, (116, 92.33))
         self.rect = self.image.get_rect()
         self.rect.center = [x,y]
@@ -114,7 +114,7 @@ class Spaceship(pygame.sprite.Sprite):
 class Bullets(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("small python projects/Games/space_invasion/bullet.png")
+        self.image = pygame.image.load("Game-Space-Invasion/bullet.png")
         self.image = pygame.transform.scale(self.image, (90, 91.5))
         self.rect = self.image.get_rect()
         self.rect.center = [x,y]
@@ -134,7 +134,7 @@ class Bullets(pygame.sprite.Sprite):
 class Aliens(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("small python projects/Games/space_invasion/alien"+str(random.randint(1,6))+".png")
+        self.image = pygame.image.load("Game-Space-Invasion/alien"+str(random.randint(1,6))+".png")
         self.image = pygame.transform.scale(self.image, (48, 27))
         self.rect = self.image.get_rect()
         self.rect.center = [x,y]
@@ -152,7 +152,7 @@ class Aliens(pygame.sprite.Sprite):
 class Alien_Bullets(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("small python projects/Games/space_invasion/alien_bullet.png")
+        self.image = pygame.image.load("Game-Space-Invasion/alien_bullet.png")
         self.image = pygame.transform.scale(self.image, (90, 91.5))
         self.rect = self.image.get_rect()
         self.rect.center = [x,y]
@@ -174,7 +174,7 @@ class Explosion(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.images = []                    #list to hold the explosion images
         for num in range(1,5):
-            img = pygame.image.load(f"small python projects/Games/space_invasion/explosion{num}.png")
+            img = pygame.image.load(f"Game-Space-Invasion/explosion{num}.png")
             if size == 1:
                 img = pygame.transform.scale(img, (20,20))
             if size == 2:
